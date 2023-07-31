@@ -164,7 +164,7 @@ initialize() {
         }
 
         const title = req.query.title;
-        let [existWiki, wikiFields] = await req.server.getDatabase().getConnection().promise().query("SELECT Title, HeaderURL, PhoenixWeb.Username, DATE_FORMAT(Date, '%e.%c.%Y %H:%i:%S') as Date, CONVERT(Content USING utf8) as Content FROM PhoenixWiki INNER JOIN PhoenixWeb ON PhoenixWeb.U_Id = PhoenixWiki.Author_Id WHERE Title = ?;", [title]);
+        let [existWiki, wikiFields] = await req.server.getDatabase().getConnection().promise().query("SELECT Title, HeaderURL, PhoenixWeb.Username, PhoenixID.UUID, DATE_FORMAT(Date, '%e.%c.%Y %H:%i:%S') as Date, CONVERT(Content USING utf8) as Content FROM PhoenixWiki INNER JOIN PhoenixWeb ON PhoenixWeb.U_Id = PhoenixWiki.Author_Id INNER JOIN PhoenixID ON PhoenixID.P_ID = PhoenixWeb.P_ID WHERE Title = ?;", [title]);
         if (existWiki.length <= 0) {
             res.redirect("/wiki?page=1");
             return;

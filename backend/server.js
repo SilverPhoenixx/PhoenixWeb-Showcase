@@ -74,7 +74,7 @@ constructor() {
     this.server = this.configurate();
     this.loadRoutes();
 
-    this.clientSocket = new ClientSocket(25590, "DOMAIN");
+    this.clientSocket = new ClientSocket(25590, "seraphimbuildings.de");
 }
 
 getRoles() {

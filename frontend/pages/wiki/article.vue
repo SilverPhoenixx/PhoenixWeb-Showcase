@@ -16,17 +16,20 @@
       <div class="p-4 bg-dark"></div>
       <div class="container-fluid my-3">
         <div class="row p-3 justify-content-center">
-          <div class="col-10 shadow-lg">
+          <div class="col-9 shadow-lg">
             <div class="row">
               <div class="col-12 centerImage" :style='"background-image: url(" + this.headerURL + ");"'></div>
               <div class="col-12 pt-2">
                 <b class="fs-3 pt-2">{{this.title}}</b>
               </div>
-              <div class="col-12 pt-2 pb-4 content" v-html="this.content">
+              <div class="col-12 d-flex">
+                  <img class="me-3" v-bind:src='"https://cravatar.eu/helmavatar/" + this.uuid + "/50.png"'>
+                <div class="d-flex flex-column align-baseline">
+                  <span class="d-block">Geschrieben von</span>
+                  <span class="fw-bold">{{this.username}}</span>
+                </div>
               </div>
-              <hr>
-              <div class="col-12 pb-3">
-                <span>Erstellt am: {{this.date}} von {{this.username}}</span>
+              <div class="col-12 pt-2 pb-4 content" v-html="this.content">
               </div>
             </div>
           </div>
@@ -73,7 +76,8 @@ export default {
       content: context?.req?.data?.Content,
       headerURL: context?.req?.data?.HeaderURL,
       date: context?.req?.data?.Date,
-      username: context?.req?.data?.Username
+      username: context?.req?.data?.Username,
+      uuid: context?.req?.data?.UUID
     }
   },
   head: {
