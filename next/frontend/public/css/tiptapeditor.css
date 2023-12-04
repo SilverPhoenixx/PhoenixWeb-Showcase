@@ -1,0 +1,35 @@
+div:focus {
+    outline: none;
+}
+p {
+    margin: 0;
+}
+.ProseMirror {
+    min-height: 10em;
+}
+.heading-options-container {
+    position: relative;
+    display: inline-block;
+}
+.renderImg {
+    max-width: 50%;
+}
+
+.heading-buttons {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    z-index: 5;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.heading-buttons li, .heading-buttons button {
+    display: block;
+}

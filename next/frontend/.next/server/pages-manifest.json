@@ -1,0 +1,18 @@
+{
+  "/_app": "pages/_app.js",
+  "/wiki/add": "pages/wiki/add.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/apply-info": "pages/apply-info.js",
+  "/portfolio": "pages/portfolio.js",
+  "/login": "pages/login.js",
+  "/apply": "pages/apply.js",
+  "/wiki/article": "pages/wiki/article.js",
+  "/team": "pages/team.js",
+  "/wiki/edit": "pages/wiki/edit.js",
+  "/404": "pages/404.html",
+  "/profil": "pages/profil.js",
+  "/wiki": "pages/wiki.js",
+  "/worlds": "pages/worlds.js",
+  "/": "pages/index.js"
+}

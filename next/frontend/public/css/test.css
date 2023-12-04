@@ -1,0 +1,10 @@
+#sector1 {
+    background-image: url("/assets/TeamPose.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body, html, #_next {
+    height: 100%;
+    width: 100%;
+}
